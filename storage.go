@@ -7,6 +7,7 @@ import (
 
 type Storage interface {
 	List() ([]FileInfo, error)
+	Delete(string) error
 	Upload(string, io.Reader) error
 	Download(string, io.Writer) error
 }
